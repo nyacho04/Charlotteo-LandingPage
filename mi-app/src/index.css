@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Fonts */
   --font-titles: 'Michroma', sans-serif;
@@ -20,6 +26,8 @@
   --bg-100: #1E1E1E; /* negro suave */
   --bg-200: #2d2d2d; /* gris oscuro */
   --bg-300: #454545; /* gris medio */
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {

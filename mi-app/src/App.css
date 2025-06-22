@@ -1,50 +1,11 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 .App {
   text-align: center;
 }
-
 
 .parallax-section {
   position: relative;
@@ -52,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: var(--text-100);
+  color: white;
   overflow: hidden;
 }
 
@@ -67,102 +28,44 @@
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   object-fit: cover;
-  filter: blur(25px);
+  filter: blur(15px);
 }
 
 .title-container {
   padding: 2rem 4rem;
   margin-bottom: 17vh;
+  border-radius: 10px;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .parallax-section h1 {
   font-size: 4.5rem;
-  color: var(--text-100);
+  color: white;
   margin: 0;
+  animation: fadeInSlideUp 1s ease-out forwards;
 }
 
 .parallax-section p {
     font-size: 1.5rem;
-    color: var(--text-200);
+    color: #e0e0e0;
     font-weight: 300;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out 0.5s forwards;
 }
 
 .content-section {
-  padding: 4rem 2rem;
-  background-color: var(--bg-200);
+  padding: 1rem 2rem 4rem 2rem;
   position: relative;
   z-index: 1;
 }
 
-.about-section {
-  max-width: 900px;
-  margin: 0 auto 5rem auto;
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
-  color: var(--primary-200);
-  margin-bottom: 2rem;
-  border-bottom: 2px solid var(--primary-100);
-  padding-bottom: 1rem;
-  display: inline-block;
-}
-
-.about-content {
-  background-color: rgba(45, 45, 45, 0.5);
-  border: 1px solid var(--bg-300);
-  padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-200);
-  text-align: left;
-}
-
-
-
-.authors-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.authors-section h2 {
-  font-size: 2.5rem;
-  color: var(--primary-200);
-  margin-bottom: 3rem;
-  border-bottom: 2px solid var(--primary-100);
-  padding-bottom: 1rem;
-  display: inline-block;
-}
-
-.authors-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.author-card {
-  background-color: var(--bg-200);
-  padding: 2rem;
-  border-radius: 8px;
-  flex-basis: 300px;
-  flex-grow: 1;
-  border: 1px solid var(--bg-300);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.author-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.author-card h3 {
-  font-size: 1.8rem;
-  color: var(--accent-100);
-  margin: 0;
-}

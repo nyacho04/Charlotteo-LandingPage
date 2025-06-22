@@ -1,0 +1,47 @@
+.carousel-container {
+  width: 50%;
+  margin: 2rem auto 0 auto;
+}
+
+.slide-item {
+  padding: 0 15px; /* Adds spacing between slides if you show more than one */
+}
+
+.slide-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Customizing the arrows */
+.slick-arrow {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: white;
+  opacity: 0.75;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+} 
