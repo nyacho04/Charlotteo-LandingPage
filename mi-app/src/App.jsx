@@ -4,7 +4,7 @@ import Header from './components/Header/Header'
 import BlurredSection from './components/BlurredSection/BlurredSection'
 
 function App() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -33,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default App 

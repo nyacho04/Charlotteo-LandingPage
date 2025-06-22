@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPython, FaHtml5, FaCss3Alt, FaReact
 import { SiFastapi, SiOpenai, SiVmware } from 'react-icons/si';
 import ImageCarousel from '../ImageCarousel/ImageCarousel';
 
-const BlurredSection: React.FC = () => {
+const BlurredSection = () => {
   return (
     <div className="blurred-section">
       <section id="proyecto" className="content-block">

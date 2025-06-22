@@ -11,7 +11,7 @@ const images = [
   '/captura_chatclaro2.png'
 ];
 
-const ImageCarousel: React.FC = () => {
+const ImageCarousel = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
