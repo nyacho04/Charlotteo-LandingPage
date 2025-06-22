@@ -1,2 +1,2 @@
-# vmware_landing_page
-landing page for my final project from holberton school
+## VMware Assistance Landing Page
+Landing page for my final project from Holberton School
