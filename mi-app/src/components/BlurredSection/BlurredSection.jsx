@@ -22,27 +22,27 @@ const BlurredSection = () => {
             <div className="author-photo"></div>
             <h3>Ignacio <br/> Devita</h3>
             <div className="author-socials">
-              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://www.linkedin.com/in/idevita/" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="https://github.com/nyacho04" aria-label="GitHub"><FaGithub /></a>
-              <a href="#" aria-label="Email"><FaEnvelope /></a>
+              <a href="mailto:ignacio.devita.4@gmail.com" aria-label="Email"><FaEnvelope /></a>
             </div>
           </div>
           <div className="author-card">
             <div className="author-photo"></div>
             <h3>Bryan <br/> Alemán</h3>
             <div className="author-socials">
-              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="#" aria-label="GitHub"><FaGithub /></a>
-              <a href="#" aria-label="Email"><FaEnvelope /></a>
+              <a href="https://www.linkedin.com/in/bryanaleman/" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://github.com/balemansteve" aria-label="GitHub"><FaGithub /></a>
+              <a href="mailto:marcos.pessano1@gmail.com" aria-label="Email"><FaEnvelope /></a>
             </div>
           </div>
           <div className="author-card">
             <div className="author-photo"></div>
             <h3>Marcos <br/> Pessano</h3>
             <div className="author-socials">
-              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="#" aria-label="GitHub"><FaGithub /></a>
-              <a href="#" aria-label="Email"><FaEnvelope /></a>
+              <a href="https://www.linkedin.com/in/marcos-pessano/" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://github.com/kimikoultramega" aria-label="GitHub"><FaGithub /></a>
+              <a href="mailto:marcos.pessano1@gmail.com" aria-label="Email"><FaEnvelope /></a>
             </div>
           </div>
         </div>
