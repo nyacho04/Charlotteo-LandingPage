@@ -1,16 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BlurredSection.css';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPython, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPython, FaHtml5, FaCss3Alt, FaReact, FaJsSquare } from 'react-icons/fa';
 import { SiFastapi, SiOpenai, SiVmware } from 'react-icons/si';
 import ImageCarousel from '../ImageCarousel/ImageCarousel';
 
+const authors = [
+  {
+    name: 'Ignacio Devita',
+    img: '/ignacio_devita.jpg',
+    linkedin: 'https://www.linkedin.com/in/idevita/',
+    github: 'https://github.com/nyacho04',
+    email: 'ignacio.devita.4@gmail.com',
+    role: 'Frontend Developer',
+  },
+  {
+    name: 'Bryan Alemán',
+    img: '/bryan_aleman.jpg',
+    linkedin: 'https://www.linkedin.com/in/bryanaleman/',
+    github: 'https://github.com/balemansteve',
+    email: 'bryan.aleman@gmail.com',
+    role: 'Backend Developer',
+  },
+  {
+    name: 'Marcos Pessano',
+    img: '/marcos_pessano.jpg',
+    linkedin: 'https://www.linkedin.com/in/marcos-pessano/',
+    github: 'https://github.com/kimikoultramega',
+    email: 'marcos.pessano1@gmail.com',
+    role: 'Project Manager',
+  },
+];
+
 const BlurredSection = () => {
+  const [copiedIndex, setCopiedIndex] = useState(null);
+
+  const handleCopy = (email, idx) => {
+    navigator.clipboard.writeText(email);
+    setCopiedIndex(idx);
+    setTimeout(() => setCopiedIndex(null), 1500);
+  };
+
   return (
     <div className="blurred-section">
       <section id="proyecto" className="content-block">
         <h2>Acerca del Proyecto</h2>
         <p>
-          Este proyecto está orientado al diagnóstico inteligente de infraestructura virtual sobre VMware vSphere mediante el uso de inteligencia artificial generativa de OpenAI, a través de un chat como interfaz de usuario. El propósito es agilizar el análisis de métricas complejas, generar reportes técnicos, recomendaciones contextualizadas a partir de consultas escritas en lenguaje natural, facilitando que el equipo de Cloud pueda tomar decisiones informadas, reducir tiempos de troubleshooting y mejorar la eficiencia operativa de forma proactiva. Este documento contiene el diseño de diagramas UML y su explicación, de manera que se logre comprender el funcionamiento de los distintos componentes de la aplicación para su implementación y mantenimiento.
+          Este proyecto está orientado al diagnóstico inteligente de infraestructura virtual sobre VMware vSphere mediante el uso de inteligencia artificial generativa de OpenAI, a través de un chat como interfaz de usuario. El propósito es agilizar el análisis de métricas complejas, generar reportes técnicos, recomendaciones contextualizadas a partir de consultas escritas en lenguaje natural, facilitando que el equipo de Cloud pueda tomar decisiones informadas, reducir tiempos de troubleshooting y mejorar la eficiencia operativa de forma proactiva.
         </p>
         <ImageCarousel />
       </section>
@@ -18,33 +53,27 @@ const BlurredSection = () => {
       <section id="equipo" className="content-block">
         <h2>Equipo</h2>
         <div className="authors-container">
-          <div className="author-card">
-            <div className="author-photo"></div>
-            <h3>Ignacio <br/> Devita</h3>
-            <div className="author-socials">
-              <a href="https://www.linkedin.com/in/idevita/" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="https://github.com/nyacho04" aria-label="GitHub"><FaGithub /></a>
-              <a href="mailto:ignacio.devita.4@gmail.com" aria-label="Email"><FaEnvelope /></a>
+          {authors.map((author, idx) => (
+            <div className="author-card" key={author.name}>
+              <div className="author-photo">
+                <img src={author.img} alt={author.name} style={{width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover'}} />
+              </div>
+              <h3>{author.name.split(' ')[0]} <br/> {author.name.split(' ')[1]}</h3>
+              <div className="author-socials">
+                <a href={author.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                <a href={author.github} aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                <span style={{position: 'relative', display: 'inline-block'}}>
+                  <button onClick={() => handleCopy(author.email, idx)} aria-label="Copiar Email" style={{background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0, fontSize: '1.8rem', lineHeight: 1}}>
+                    <FaEnvelope />
+                  </button>
+                  {copiedIndex === idx && (
+                    <span style={{position: 'absolute', top: '2.2rem', left: '50%', transform: 'translateX(-50%)', fontSize: '0.8rem', color: '#a9ffb0'}}>Copiado</span>
+                  )}
+                </span>
+              </div>
+              <div className="author-role">{author.role}</div>
             </div>
-          </div>
-          <div className="author-card">
-            <div className="author-photo"></div>
-            <h3>Bryan <br/> Alemán</h3>
-            <div className="author-socials">
-              <a href="https://www.linkedin.com/in/bryanaleman/" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="https://github.com/balemansteve" aria-label="GitHub"><FaGithub /></a>
-              <a href="mailto:marcos.pessano1@gmail.com" aria-label="Email"><FaEnvelope /></a>
-            </div>
-          </div>
-          <div className="author-card">
-            <div className="author-photo"></div>
-            <h3>Marcos <br/> Pessano</h3>
-            <div className="author-socials">
-              <a href="https://www.linkedin.com/in/marcos-pessano/" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="https://github.com/kimikoultramega" aria-label="GitHub"><FaGithub /></a>
-              <a href="mailto:marcos.pessano1@gmail.com" aria-label="Email"><FaEnvelope /></a>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
       
@@ -54,14 +83,15 @@ const BlurredSection = () => {
             <div className="tech-icon"><FaPython /><p>Python</p></div>
             <div className="tech-icon"><SiFastapi /><p>FastAPI</p></div>
             <div className="tech-icon"><FaReact /><p>React</p></div>
-            <div className="tech-icon"><FaHtml5 /><p>HTML5</p></div>
-            <div className="tech-icon"><FaCss3Alt /><p>CSS3</p></div>
+            <div className="tech-icon"><FaHtml5 /><p>HTML</p></div>
+            <div className="tech-icon"><FaCss3Alt /><p>CSS</p></div>
+            <div className="tech-icon"><FaJsSquare /><p>JavaScript</p></div>
             <div className="tech-icon"><SiOpenai /><p>OpenAI</p></div>
-            <div className="tech-icon"><SiVmware /><p>VMware</p></div>
+            <div className="tech-icon"><SiVmware /><p>Aria Operations</p></div>
         </div>
       </section>
     </div>
   );
 };
 
-export default BlurredSection; 
+export default BlurredSection;
