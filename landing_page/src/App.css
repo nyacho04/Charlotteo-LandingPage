@@ -1,0 +1,71 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.parallax-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.parallax-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+  filter: blur(15px);
+}
+
+.title-container {
+  padding: 2rem 4rem;
+  margin-bottom: 17vh;
+  border-radius: 10px;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parallax-section h1 {
+  font-size: 4.5rem;
+  color: white;
+  margin: 0;
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+.parallax-section p {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out 0.5s forwards;
+}
+
+.content-section {
+  padding: 1rem 2rem 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
