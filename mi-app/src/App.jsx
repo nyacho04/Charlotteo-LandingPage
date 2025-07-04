@@ -17,7 +17,7 @@ function App() {
       <Header />
       <header className="parallax-section">
         <video ref={videoRef} autoPlay loop muted className="parallax-video">
-          <source src="/parallax-video5.mp4.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}parallax-video5.mp4.mp4`} type="video/mp4" />
           Tu navegador no soporta la etiqueta de video.
         </video>
         <div className="title-container">

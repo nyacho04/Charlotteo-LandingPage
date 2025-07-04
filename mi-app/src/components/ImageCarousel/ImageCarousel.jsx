@@ -5,10 +5,10 @@ import "yet-another-react-lightbox/styles.css";
 import './ImageCarousel.css';
 
 const images = [
-  '/captura_chat1.png',
-  '/captura_chat2.png',
-  '/captura_chatclaro1.png',
-  '/captura_chatclaro2.png'
+  `${import.meta.env.BASE_URL}captura_chat1.png`,
+  `${import.meta.env.BASE_URL}captura_chat2.png`,
+  `${import.meta.env.BASE_URL}captura_chatclaro1.png`,
+  `${import.meta.env.BASE_URL}captura_chatclaro2.png`
 ];
 
 const ImageCarousel = () => {

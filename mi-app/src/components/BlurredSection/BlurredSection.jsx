@@ -7,7 +7,7 @@ import ImageCarousel from '../ImageCarousel/ImageCarousel';
 const authors = [
   {
     name: 'Ignacio Devita',
-    img: '/ignacio_devita.jpg',
+    img: `${import.meta.env.BASE_URL}ignacio_devita.jpg`,
     linkedin: 'https://www.linkedin.com/in/idevita/',
     github: 'https://github.com/nyacho04',
     email: 'ignacio.devita.4@gmail.com',
@@ -15,7 +15,7 @@ const authors = [
   },
   {
     name: 'Bryan Alemán',
-    img: '/bryan_aleman.jpg',
+    img: `${import.meta.env.BASE_URL}bryan_aleman.jpg`,
     linkedin: 'https://www.linkedin.com/in/bryanaleman/',
     github: 'https://github.com/balemansteve',
     email: 'bryan.aleman@gmail.com',
@@ -23,7 +23,7 @@ const authors = [
   },
   {
     name: 'Marcos Pessano',
-    img: '/marcos_pessano.jpg',
+    img: `${import.meta.env.BASE_URL}marcos_pessano.jpg`,
     linkedin: 'https://www.linkedin.com/in/marcos-pessano/',
     github: 'https://github.com/kimikoultramega',
     email: 'marcos.pessano1@gmail.com',
