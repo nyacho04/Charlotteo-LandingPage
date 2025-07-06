@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './BlurredSection.css';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPython, FaHtml5, FaCss3Alt, FaReact, FaJsSquare } from 'react-icons/fa';
 import { SiFastapi, SiOpenai, SiVmware } from 'react-icons/si';
@@ -32,13 +32,6 @@ const authors = [
 ];
 
 const BlurredSection = () => {
-  const [copiedIndex, setCopiedIndex] = useState(null);
-
-  const handleCopy = (email, idx) => {
-    navigator.clipboard.writeText(email);
-    setCopiedIndex(idx);
-    setTimeout(() => setCopiedIndex(null), 1500);
-  };
 
   return (
     <div className="blurred-section">
@@ -62,14 +55,7 @@ const BlurredSection = () => {
               <div className="author-socials">
                 <a href={author.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                 <a href={author.github} aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                <span style={{position: 'relative', display: 'inline-block'}}>
-                  <button onClick={() => handleCopy(author.email, idx)} aria-label="Copiar Email" style={{background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0, fontSize: '1.8rem', lineHeight: 1}}>
-                    <FaEnvelope />
-                  </button>
-                  {copiedIndex === idx && (
-                    <span style={{position: 'absolute', top: '2.2rem', left: '50%', transform: 'translateX(-50%)', fontSize: '0.8rem', color: '#a9ffb0'}}>Copiado</span>
-                  )}
-                </span>
+                <a href={`mailto:${author.email}`} aria-label="Enviar Email"><FaEnvelope /></a>
               </div>
               <div className="author-role">{author.role}</div>
             </div>
