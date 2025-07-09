@@ -21,8 +21,9 @@ function App() {
           Tu navegador no soporta la etiqueta de video.
         </video>
         <div className="title-container">
-          <h1>VMware Assistance</h1>
-          <p>Diagnóstico inteligente de infraestructura virtual</p>
+          <img src={import.meta.env.BASE_URL + "charlotte%20icono%20blanco.png"} alt="Charlotte Icono Blanco" style={{ width: '170px', marginBottom: '1rem' }} />
+          <h1>Charlotteo</h1>
+          <p>Diagnóstico inteligente de infraestructura virtual de VMware</p>
         </div>
       </header>
 

@@ -49,10 +49,11 @@
 }
 
 .parallax-section h1 {
-  font-size: 4.5rem;
+  font-size: 6rem;
   color: white;
   margin: 0;
   animation: fadeInSlideUp 1s ease-out forwards;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .parallax-section p {

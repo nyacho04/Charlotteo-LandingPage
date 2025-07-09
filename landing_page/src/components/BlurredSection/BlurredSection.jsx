@@ -38,7 +38,7 @@ const BlurredSection = () => {
       <section id="proyecto" className="content-block">
         <h2>Acerca del Proyecto</h2>
         <p>
-          Este proyecto está orientado al diagnóstico inteligente de infraestructura virtual sobre VMware vSphere mediante el uso de inteligencia artificial generativa de OpenAI, a través de un chat como interfaz de usuario. El propósito es agilizar el análisis de métricas complejas, generar reportes técnicos, recomendaciones contextualizadas a partir de consultas escritas en lenguaje natural, facilitando que el equipo de Cloud pueda tomar decisiones informadas, reducir tiempos de troubleshooting y mejorar la eficiencia operativa de forma proactiva.
+          Charlotteo es un proyecto orientado al diagnóstico inteligente de infraestructura virtual sobre VMware vSphere mediante el uso de inteligencia artificial generativa de OpenAI, a través de un chat como interfaz de usuario. El propósito es agilizar el análisis de métricas complejas, generar reportes técnicos, recomendaciones contextualizadas a partir de consultas escritas en lenguaje natural, facilitando que el equipo de Cloud pueda tomar decisiones informadas, reducir tiempos de troubleshooting y mejorar la eficiencia operativa de forma proactiva.
         </p>
         <ImageCarousel />
       </section>
