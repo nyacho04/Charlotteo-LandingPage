@@ -70,3 +70,7 @@
   z-index: 1;
 }
 
+.parallax-section .icono-animado {
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+
