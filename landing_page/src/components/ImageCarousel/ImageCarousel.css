@@ -44,4 +44,95 @@
 .slick-dots li.slick-active button:before {
   color: rgba(255,255,255,0.95) !important;
   opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 80%;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .slide-item {
+    padding: 0 10px;
+  }
+
+  .slick-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .slick-prev {
+    left: -40px;
+  }
+
+  .slick-next {
+    right: -40px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 90%;
+    margin: 1rem auto 0 auto;
+  }
+
+  .slide-item {
+    padding: 0 8px;
+  }
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-prev {
+    left: -35px;
+  }
+
+  .slick-next {
+    right: -35px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .carousel-container {
+    width: 95%;
+    margin: 0.8rem auto 0 auto;
+  }
+
+  .slide-item {
+    padding: 0 5px;
+  }
+
+  .slick-arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 25px;
+  }
 } 

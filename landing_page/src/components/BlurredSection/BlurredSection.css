@@ -153,4 +153,182 @@
   font-size: 1rem;
   text-align: center;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .blurred-section {
+    padding: 2rem 1.5rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+  }
+
+  .content-block {
+    margin-bottom: 6rem;
+  }
+
+  .content-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .authors-container {
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .author-card {
+    padding: 2rem 1.5rem;
+    flex-basis: 250px;
+  }
+
+  .author-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .author-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .author-socials {
+    gap: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .author-role {
+    font-size: 1rem;
+  }
+
+  .tech-icons-container {
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .tech-icon {
+    font-size: 3rem;
+    min-width: 100px;
+  }
+
+  .tech-icon p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blurred-section {
+    padding: 1.5rem 1rem;
+    margin: 2rem auto;
+  }
+
+  .content-block {
+    margin-bottom: 4rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-block p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .authors-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .author-card {
+    padding: 1.5rem 1rem;
+    flex-basis: 200px;
+  }
+
+  .author-photo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.8rem;
+  }
+
+  .author-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .author-socials {
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .author-role {
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+  }
+
+  .tech-icons-container {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .tech-icon {
+    font-size: 2.5rem;
+    min-width: 80px;
+  }
+
+  .tech-icon p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .blurred-section {
+    padding: 1rem 0.8rem;
+    margin: 1.5rem auto;
+  }
+
+  .content-block {
+    margin-bottom: 3rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.6rem;
+  }
+
+  .content-block p {
+    font-size: 0.9rem;
+  }
+
+  .authors-container {
+    gap: 1rem;
+  }
+
+  .author-card {
+    padding: 1.2rem 0.8rem;
+    flex-basis: 180px;
+  }
+
+  .author-photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .author-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .author-socials {
+    font-size: 1.2rem;
+  }
+
+  .tech-icon {
+    font-size: 2rem;
+    min-width: 70px;
+  }
 } 

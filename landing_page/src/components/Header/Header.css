@@ -24,4 +24,46 @@
 
 .site-header nav a:hover {
   color: #a9a9a9;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .site-header nav ul {
+    gap: 1.5rem;
+  }
+
+  .site-header nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 1rem 0.8rem;
+  }
+
+  .site-header nav ul {
+    gap: 1rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .site-header nav ul {
+    gap: 0.8rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.8rem;
+  }
 } 
